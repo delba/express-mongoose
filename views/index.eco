@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Express Mongoose</title>
+  </head>
+  <body>
+    <h1><a href='/'>Express Mongoose</a></h1>
+    <p><a href="/new">New Photo</a></p>
+
+    <% for photo in @photos: %>
+      <article>
+        <h2><%= photo.name %></h2>
+        <a href="/<%= photo.id %>">
+          <img src='/uploads/<%= photo.path %>' />
+        </a>
+      </article>
+    <% end %>
+  </body>
+</html>

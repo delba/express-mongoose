@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Express Mongoose</title>
+  </head>
+  <body>
+    <h1><a href='/'>Express Mongoose</a></h1>
+    <article>
+      <h2><%= @photo.name %></h2>
+      <img src='/uploads/<%= @photo.path %>' />
+      <form action="/<%= @photo.id %>" method="post">
+        <input type="hidden" name="_method" value="delete" />
+        <input type="submit" value="Delete Photo" />
+      </form>
+    </article>
+  </body>
+</html>
